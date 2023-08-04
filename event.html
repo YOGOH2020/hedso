@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Include custom CSS -->
+  <style>
+    body {
+      background-color: #191919;
+      color: #fff;
+    }
+    
+    .navbar {
+      background-color: #161b24;
+    }
+    
+    .nav-link {
+      color: #fff !important;
+    }
+    
+    .event-calendar {
+      margin-top: 50px;
+    }
+    
+    .calendar-header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    .calendar-body {
+      background-color: #343a40;
+      padding: 20px;
+    }
+    
+    .date-cell {
+      position: relative;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      color: #343a40;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .date-cell:hover {
+      transform: scale(1.05);
+    }
+    
+    .event-details {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(52, 58, 64, 0.9);
+      color: #fff;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 1;
+    }
+    
+    .date-cell:hover .event-details {
+      opacity: 1;
+      visibility: visible;
+    }
+    .footer {
+      background-color: #161b24;
+      color: #fff;
+      padding: 20px 0;
+    }
+    
+    .footer a {
+      color: #4CAF50;
+    }
+    
+    .footer a:hover {
+      color: #fff;
+    }
+  </style>
+  <!-- Include FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HEDSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./about.html">OverView</a>
+            <a class="dropdown-item" href="./board.html">Meet The Team</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./agw.html">AGYW</a>
+            <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+            <a class="dropdown-item" href="./gbv.html">SGBV</a>
+            <a class="dropdown-item" href="./srhr.html">SRHR</a>
+            <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+            <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+            <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+            <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+            <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./approach.html">Our Approach</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="#program1">Blogs</a>
+            <a class="dropdown-item" href="#program2">Newsletters</a>
+            <a class="dropdown-item" href="#program3">Events</a>
+            <a class="dropdown-item" href="#program4">Our Gallery</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Event Calendar Section -->
+  <section class="event-calendar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="calendar-header">
+            <h2>July 2023</h2>
+          </div>
+          <div class="calendar-body">
+            <div class="row">
+              <div class="col-4">
+                <div class="date-cell">
+                  <div class="date">1</div>
+                  <div class="event-details">
+                    <p>Event 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Event 2: Nulla facilisi. Sed at finibus nulla.</p>
+                  </div>
+                </div>
+                <div class="date-cell">
+                  <div class="date">2</div>
+                  <div class="event-details">
+                    <p>Event 3: Duis luctus arcu sit amet turpis tristique, vel semper justo fringilla.</p>
+                  </div>
+                </div>
+                <!-- Add more date cells here -->
+              </div>
+              <div class="col-4">
+                <!-- Add more columns here -->
+              </div>
+              <div class="col-4">
+                <!-- Add more columns here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>HEDSO ORGANIZATION</h3>
+          <p>Tom Mboya Estate, Kisumu, Kenya</p>
+          <p>Phone: +254773222909 | +254768546640</p>
+          <p>Email: info@hedso.org</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">The Issue</a></li>
+            <li><a href="./approach.html">Our Approach</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./volunteer.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect with Us</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Bootstrap JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

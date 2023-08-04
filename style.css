@@ -1,0 +1,55 @@
+body {
+    background-color: #191919;
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #161b24;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+  }
+  
+  .hero {
+    background-color: #161b24;
+    color: #fff;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-section {
+    background-color: #161b24;
+    color: #fff;
+  }
+  
+  .program-card {
+    background-color: #161b24;
+    color: #fff;
+    border: 1px solid #4CAF50;
+  }
+  
+  .partner-logo img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .partner-logo img:hover {
+    filter: grayscale(0%);
+  }
+  
+  .footer {
+    background-color: #161b24;
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #4CAF50;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+  }
+  

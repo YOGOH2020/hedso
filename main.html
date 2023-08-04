@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | HEDSO</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #191919;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      animation: fadeInBody 1s;
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .navbar {
+      background-color: #161b24;
+    }
+    
+    .nav-link {
+      color: #fff !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Add opacity overlay */
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      animation: fadeInGlass 2s;
+    }
+
+    @keyframes fadeInGlass {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Main Program Explanation Section */
+    .main-program-explanation {
+      padding: 50px 0;
+    }
+
+    .main-program-explanation h2 {
+      color: #4CAF50;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .program-image {
+      width: 100%;
+      border-radius: 10px;
+      animation: imageZoomIn 2s;
+    }
+
+    @keyframes imageZoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+
+    /* Program Section */
+    .program-section {
+      padding: 50px 0;
+    }
+
+    .program-section h2 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    /* Different background colors for each program section */
+    .program-section:nth-child(odd) {
+      background-color: rgba(236, 64, 122, 0.8); /* Material Pink */
+    }
+
+    .program-section:nth-child(even) {
+      background-color: rgba(103, 58, 183, 0.8); /* Material Deep Purple */
+    }
+
+    .program-section li {
+      position: relative;
+      list-style: none;
+      padding-left: 30px;
+      font-size: 18px;
+      line-height: 1.8;
+      animation: fadeInList 1s;
+    }
+
+    .program-section li::before {
+      content: "\f00c"; /* Font Awesome tick icon */
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-size: 20px;
+      color: #fff;
+      opacity: 0;
+      transform: scale(0);
+      animation: fadeInIcon 1s;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInList {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInIcon {
+      from {
+        opacity: 0;
+        transform: scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #161b24;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer a {
+      color: #4CAF50;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+  </style>
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">HEDSO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="homeLink" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <a class="dropdown-item" href="./about.html">OverView</a>
+              <a class="dropdown-item" href="./board.html">Meet The Team</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Programs
+            </a>
+            <div class="dropdown-menu" aria-labelledby="programsDropdown">
+              <a class="dropdown-item" href="./agw.html">AGYW</a>
+              <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+              <a class="dropdown-item" href="./gbv.html">SGBV</a>
+              <a class="dropdown-item" href="./srhr.html">SRHR</a>
+              <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+              <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+              <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+              <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+              <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+            </div>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="./approach.html">Our Approach</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
+              <a class="dropdown-item" href="#program1">Blogs</a>
+              <a class="dropdown-item" href="#program2">Newsletters</a>
+              <a class="dropdown-item" href="#program3">Events</a>
+              <a class="dropdown-item" href="#program4">Our Gallery</a>
+            </div>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="./donate.html">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./volunteer.html">Volunteer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="./images/main.jpg" alt="Hero Image">
+    <div class="hero-text">
+      <h1>Focus Areas</h1>
+      <p>Empowering communities, transforming lives</p>
+    </div>
+  </section>
+
+  <!-- Main Program Explanation Section -->
+  <section class="main-program-explanation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./images/prog1.JPG" alt="Program 1 Image" class="program-image">
+        </div>
+        <div class="col-lg-6">
+          <h2>Integrated Health and well-being</h2>
+          <p>To empower and improve health and wellbeing of AGYW and youths by addressing their specific needs, promoting gender equality, ensuring their rights to sexual reproductive health are prioritized, providing mental and psychosocial support..</p>
+          <a href="./integ.html" class="btn btn-success">Find More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Section 1 -->
+  <section class="program-section" style="background-color: #4CAF50;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Prevention and response to all forms of GBV and discrimination against AGYW and Youth</h2>
+          <ul>
+            <li>Enhancing self advocacy among AGYW and youths to improve prevention and response to GBV and ensuring that prevention and response mechanisms are functional at all levels.</li>
+            <li>Reduced cases of Gender Based Violence among AGYW.</li>
+          </ul>
+          <a href="./gbv.html" class="btn btn-primary">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/gbv2.JPG" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section" style="background-color: #191919;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Sexual Reproductive Health</h2>
+          <ul>
+            <li>Enhance access to quality sexual reproductive health services and accurate information among AGYW and youths to reduce teen pregnancy...</li>
+          </ul>
+          <a href="./srhr.html" class="btn btn-success">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/teen.jpg" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section" style="background-color: #4CAF50;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>HIV Prevention and Response</h2>
+          <ul>
+            <li>Contribute to reduced new HIV infections among AGYW and youths. As per the National Syndemic Disease Control Council 2021 report, Kenye recorded 34,540 new HIV infections. The new infections signified a 7.3 percent increase after nearly..</li>
+          </ul>
+          <a href="./hiv.html" class="btn btn-primary">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/srh7.jpg" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-program-explanation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./images/hero3.jpg" alt="Program 1 Image" class="program-image">
+        </div>
+        <div class="col-lg-6">
+          <h2>AGYW, PWDs and Youths Economic Empowerment</h2>
+          <ul>
+            <li>Enhance a stronger ecosystem for AGYW and youths employment and entrepreneurship. According to Kenya National Bureau of Statistics (KNBS) data released by December 2022, More than half of Kenyans without jobs..</li>
+          </ul>
+          <a href="./agw.html" class="btn btn-success">Find More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-program-explanation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="./images/climate.JPG" alt="Program 1 Image" class="program-image">
+        </div>
+        <div class="col-lg-6">
+          <h2>Climate Change Resilience</h2>
+          <ul>
+            <li>Contribute to minimizing the impacts of climate change on AGYW and youth. Sexual and reproductive health are at risk in a changing climate, and AGYW and youth are not severely affected. The disproportionate..</li>
+          </ul>
+          <a href="./climateres.html" class="btn btn-primary">Find More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section" style="background-color: #4CAF50;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Waste management</h2>
+          <ul>
+            <li>To minimize the negative impacts of waste on human health and the environment...</li>
+          </ul>
+          <a href="./waste.html" class="btn btn-primary">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/waste.jpg" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section" style="background-color: #191919;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Tree Growing</h2>
+          <ul>
+            <li>To contribute towards ecosystem restoration by increasing trees coverage...</li>
+          </ul>
+          <a href="./tree.html" class="btn btn-success">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/growing.jpg" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program-section" style="background-color: #4CAF50; margin-bottom: 30px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Disaster Risk Reduction</h2>
+          <ul>
+            <li>Contribute to Disaster Risk Reduction and climate change adaptation...</li>
+          </ul>
+          <a href="./disaster.html" class="btn btn-primary">Find More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/disaster.jpg" alt="Program 2 Image" class="program-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>HEDSO ORGANIZATION</h3>
+          <p>Tom Mboya Estate, Kisumu, Kenya</p>
+          <p>Phone: +254773222909 | +254768546640</p>
+          <p>Email: info@hedso.org</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">The Issue</a></li>
+            <li><a href="./approach.html">Our Approach</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./volunteer.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect with Us</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Bootstrap JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Add event listeners to the dropdown links and prevent their default behavior
+    const dropdownLinks = document.querySelectorAll('.nav-item.dropdown .dropdown-menu a');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = link.getAttribute('href');
+      });
+    });
+  </script>
+</body>
+</html>
+

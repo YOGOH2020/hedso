@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | HEDSO</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Include custom CSS -->
+  <style>
+    body {
+      background-color: #191919;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #161b24;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .nav-link {
+      color: #fff !important;
+    }
+
+    .footer {
+      background-color: #161b24;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .footer a {
+      color: #4CAF50;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .team-section {
+      background-color: #191919;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: 40px;
+    }
+
+    .team-section h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .team-member {
+      margin-bottom: 20px;
+      animation: fade-in 1s ease-in-out;
+    }
+
+    .team-member .member-info {
+      background-color: #161b24;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .team-member .member-info h4 {
+      margin: 0;
+    }
+
+    .team-member .member-info p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .team-member .member-details {
+      background-color: #252d3a;
+      color: #fff;
+      padding: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    .team-member .member-details.show {
+      max-height: 500px;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HEDSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./about.html">OverView</a>
+            <a class="dropdown-item" href="./board.html">Meet The Team</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./agw.html">AGYW</a>
+            <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+            <a class="dropdown-item" href="./gbv.html">SGBV</a>
+            <a class="dropdown-item" href="./srhr.html">SRHR</a>
+            <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+            <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+            <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+            <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+            <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./approach.html">Our Approach</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="#program1">Blogs</a>
+            <a class="dropdown-item" href="#program2">Newsletters</a>
+            <a class="dropdown-item" href="#program3">Events</a>
+            <a class="dropdown-item" href="#program4">Our Gallery</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Welcome to Our Team</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="team-member">
+            <img src="./images/gallery1.jpg" alt="Team Member 1" class="img-fluid">
+            <div class="member-info" data-toggle="collapse" data-target="#member1-details">
+              <h4>John Doe</h4>
+              <p>Position: Team Leader</p>
+            </div>
+            <div id="member1-details" class="member-details collapse">
+              <p>John Doe is the Team Leader at HEDSO. With over 10 years of experience in the field, he has played a crucial role in guiding the organization's mission and vision. He is passionate about improving the health and well-being of marginalized communities.</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./images/gallery2.jpg" alt="Team Member 2" class="img-fluid">
+            <div class="member-info" data-toggle="collapse" data-target="#member2-details">
+              <h4>Jane Smith</h4>
+              <p>Position: Program Manager</p>
+            </div>
+            <div id="member2-details" class="member-details collapse">
+              <p>Jane Smith is the Program Manager at HEDSO. She brings extensive knowledge and expertise in program planning and implementation. Her dedication to creating a positive impact in the community has been instrumental in the success of various projects.</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="team-member">
+            <img src="./images/gallery4.jpg" alt="Team Member 3" class="img-fluid">
+            <div class="member-info" data-toggle="collapse" data-target="#member3-details">
+              <h4>David Johnson</h4>
+              <p>Position: Outreach Coordinator</p>
+            </div>
+            <div id="member3-details" class="member-details collapse">
+              <p>David Johnson serves as the Outreach Coordinator at HEDSO. He has a deep understanding of community engagement and works tirelessly to ensure effective outreach programs. His passion for supporting marginalized individuals is evident in his work.</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="./images/gallery7.jpg" alt="Team Member 4" class="img-fluid">
+            <div class="member-info" data-toggle="collapse" data-target="#member4-details">
+              <h4>Sarah Wilson</h4>
+              <p>Position: Volunteer Coordinator</p>
+            </div>
+            <div id="member4-details" class="member-details collapse">
+              <p>Sarah Wilson serves as the Volunteer Coordinator at HEDSO. She oversees the recruitment and coordination of volunteers for various projects. Her dedication to creating a positive and inclusive volunteer experience has made a significant impact on the organization.</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>HEDSO ORGANIZATION</h3>
+          <p>Tom Mboya Estate, Kisumu, Kenya</p>
+          <p>Phone: +254773222909 | +254768546640</p>
+          <p>Email: info@hedso.org</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">The Issue</a></li>
+            <li><a href="./approach.html">Our Approach</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./volunteer.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect with Us</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Bootstrap JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

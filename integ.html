@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | HEDSO</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+body {
+  background-color: #191919;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #161b24;
+}
+    
+.nav-link {
+  color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev{
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Program Explanation Section */
+.program-explanation {
+  padding: 50px 0;
+}
+
+/* Program Objectives Section */
+.program-objectives {
+  padding: 50px 0;
+}
+
+.program-objectives h2 {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: tableFadeIn 1s;
+}
+
+@keyframes tableFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table thead th {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #4CAF50;
+}
+
+.table tbody td {
+  padding: 12px;
+  border: 1px solid #4CAF50;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Different background colors for each column */
+.table tbody tr:nth-child(even) td:nth-child(1) {
+  background-color: #4CAF50;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(1) {
+  background-color: #45a049;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(2) {
+  background-color: #55C1E7;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(2) {
+  background-color: #4CA6B7;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(3) {
+  background-color: #E78543;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(3) {
+  background-color: #B75E26;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(4) {
+  background-color: #EFBB35;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(4) {
+  background-color: #B79A29;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(5) {
+  background-color: #EC407A;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(5) {
+  background-color: #B71C5A;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #161b24;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #4CAF50;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HEDSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./about.html">OverView</a>
+            <a class="dropdown-item" href="./board.html">Meet The Team</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./agw.html">AGYW</a>
+            <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+            <a class="dropdown-item" href="./gbv.html">SGBV</a>
+            <a class="dropdown-item" href="./srhr.html">SRHR</a>
+            <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+            <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+            <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+            <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+            <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./approach.html">Our Approach</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="#program1">Blogs</a>
+            <a class="dropdown-item" href="#program2">Newsletters</a>
+            <a class="dropdown-item" href="#program3">Events</a>
+            <a class="dropdown-item" href="#program4">Our Gallery</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Hero image -->
+    <img class="d-block w-100" src="./images/agw.jpg" alt="Programs Hero Image">
+  </section>
+
+  <!-- Program Explanation Section -->
+  <section class="program-explanation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h2 class="text-center prev ">Prevention and Response to Gender-Based Violence (GBV) and Discrimination</h2>
+          <p>Enhancing self advocacy among AGYW and youths to improve prevention and response to GBV and ensuring that prevention and response mechanisms are functional at all levels.</p>
+          <p>Despite robust legal frameworks in Kenya, Gender-Based Violence still remains a pervasive form of human rights violation. GBV disproportionately affects more women than men. Kenya Demographic and Health Survey indicates that over 40% of women have experienced physical or sexual intimate partner violence in their lifetime. Moreover, the prevalence of child marriage and FGM is about 23% and 21% respectively in the country. We have seen these violations worsened by humanitarian crises such as the COVID-19 pandemic, crises related to electoral periods, natural disasters such as floods and drought. Subjecting women and girls to GBV is a gross violation of their fundamental human right, which has far-reaching consequences on their physical, psychological, and emotional well-being. Firstly, GBV may undermine the self-worth and self-esteem of those affected. In addition, survivors of GBV may also resort to self-harm, isolation, depression, and suicidal attempts.</p>
+          <p>Through evidence-based approaches, HEDSO envisions to play a crucial role in prevention and response to GBV by creating awareness and education about GBV in the community, providing training and capacity building to community gatekeepers, and providing linkages to support services. HEDSO focuses on reaching 10,000 AGYW and youths in the local communities, 500 community gatekeepers, and all relevant key decision-makers at the subnational level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Objectives Section -->
+  <section class="program-objectives">
+    <div class="container">
+      <h2 class="text-center">Program Objectives</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>OBJECTIVES</th>
+              <th>EXPECTED OUTCOMES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Capacity building of AGYW and youths on Gender Based Violence, referral pathways, and laws and policies addressing Gender Based Violence.</td>
+              <td>AGYW and youths actively challenge and prevent all forms of violence and abuse against them.</td>
+            </tr>
+            <tr>
+              <td>Creating a safe and supportive environment for AGYW and youths in and out of learning institutions against all forms of GBV and discrimination to thrive and achieve their full potential.</td>
+              <td>Schools and learning institutions provide a safe and conducive environment for AGYW and youths.</td>
+            </tr>
+            <tr>
+              <td>Advocate for the development and implementation of gender responsive policies and budgets to ensure access to justice for AGYW and youths.</td>
+              <td>State and Non-State actors develop and implement gender-responsive and budgeting policies that ensure access to justice for AGYW and youths.</td>
+            </tr>
+            <tr>
+              <td>Enhance knowledge on Gender Based Violence.</td>
+              <td>Community, religious, and community gatekeepers challenge norms and practices that perpetuate violence against AGYW and youths.</td>
+            </tr>
+            <tr>
+              <td>Economic integration of AGYW to reduce the incidence of GBV.</td>
+              <td>Increased financial stability among AGYW and youths and reduced level of vulnerability.</td>
+            </tr>
+            <tr>
+              <td>Promote mental health by offering psychosocial support services to AGYW and youth GBV survivors.</td>
+              <td>Improved mental health and wellbeing of AGYW and youths. Improved access to psychosocial support services that enhance overall wellbeing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>HEDSO ORGANIZATION</h3>
+          <p>Tom Mboya Estate, Kisumu, Kenya</p>
+          <p>Phone: +254773222909 | +254768546640</p>
+          <p>Email: info@hedso.org</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">The Issue</a></li>
+            <li><a href="./approach.html">Our Approach</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./volunteer.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect with Us</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

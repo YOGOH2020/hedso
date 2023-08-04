@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | HEDSO</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+body {
+  background-color: #191919;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #161b24;
+}
+    
+.nav-link {
+  color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev{
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Program Explanation Section */
+.program-explanation {
+  padding: 50px 0;
+}
+
+/* Program Objectives Section */
+.program-objectives {
+  padding: 50px 0;
+}
+
+.program-objectives h2 {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: tableFadeIn 1s;
+}
+
+@keyframes tableFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table thead th {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #4CAF50;
+}
+
+.table tbody td {
+  padding: 12px;
+  border: 1px solid #4CAF50;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Different background colors for each column */
+.table tbody tr:nth-child(even) td:nth-child(1) {
+  background-color: #4CAF50;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(1) {
+  background-color: #45a049;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(2) {
+  background-color: #55C1E7;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(2) {
+  background-color: #4CA6B7;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(3) {
+  background-color: #E78543;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(3) {
+  background-color: #B75E26;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(4) {
+  background-color: #EFBB35;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(4) {
+  background-color: #B79A29;
+}
+
+.table tbody tr:nth-child(even) td:nth-child(5) {
+  background-color: #EC407A;
+}
+
+.table tbody tr:nth-child(odd) td:nth-child(5) {
+  background-color: #B71C5A;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #161b24;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #4CAF50;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HEDSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./about.html">OverView</a>
+            <a class="dropdown-item" href="./board.html">Meet The Team</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./agw.html">AGYW</a>
+            <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+            <a class="dropdown-item" href="./gbv.html">SGBV</a>
+            <a class="dropdown-item" href="./srhr.html">SRHR</a>
+            <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+            <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+            <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+            <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+            <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./approach.html">Our Approach</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="#program1">Blogs</a>
+            <a class="dropdown-item" href="#program2">Newsletters</a>
+            <a class="dropdown-item" href="#program3">Events</a>
+            <a class="dropdown-item" href="#program4">Our Gallery</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Hero image -->
+    <img class="d-block w-100" src="./images/agw.jpg" alt="Programs Hero Image">
+  </section>
+
+  <!-- Program Explanation Section -->
+  <section class="program-explanation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h2 class="text-center prev ">Enhance access to quality sexual reproductive health  services and accurate information among AGYW and youths to reduce teen pregnancy</h2>
+          <p>Adolescents aged 10 to 19 years in Kenya are an underserved population in the health system, yet represent a large proportion of the population (24%). Adolescent girls, in particular, need access to high-quality adolescent and youth-friendly health services (AYFS), as they experience a substantial burden of adverse sexual and reproductive health (SRH) outcomes.</p>
+          <p>Adolescent girls in Kenya have high rates of unintended pregnancy, undergo unsafe abortions, and disproportionately acquire sexually transmitted infections (STIs) contributing to poor sexual health. Kenya has a robust National Adolescent SRH Policy and National Guidelines for the Provision of AYFS applicable to all tiers of the health system. Despite the well-developed national policies and guidelines for the provision of AYFS, it remains unclear if adolescent girls in Kenya are accessing and utilizing SRH services.</p>
+          <p>Access and uptake of SRH services among the youths has also been low due to structural barriers such as cost of services, sociocultural barriers such as restrictive norms and limited knowledge on SRH.</p>
+          <p>HEDSO aims to enhance access and uptake of SRH services and information among AGYW and youths through providing comprehensive education, advocacy, capacity building health professionals and AGYW and youths as champions to advocate for their rights. We aim to reach 100,000 AGYW and youths, 5000 community gatekeepers and policy makers. We will work with the community, partners and the government to adopt and implement evidenced based and data driven interventions.   </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Objectives Section -->
+  <section class="program-objectives">
+    <div class="container">
+      <h2 class="text-center">Program Objectives</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>OBJECTIVES</th>
+              <th>EXPECTED OUTCOMES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Promote access to equitable Menstrual Hygiene management (MHM) commodities and services among AGYW.</td>
+              <td>Increased access to menstrual hygiene commodities and services among AGYW. <br>
+                <br>
+                AGYW have increased knowledge, skills, capacity and resources to access menstrual justice.
+              </td>
+            </tr>
+            <tr>
+              <td>Promote access and information on family planning services, and commodities</td>
+              <td>Increased knowledge, access and uptake of family planning services. <br>
+              <br>
+              Increased budgetary allocation for FP commodities.
+              </td>
+            </tr>
+            <tr>
+              <td>Promote comprehensive sexuality education and sensitization.</td>
+              <td>Families and communities engage in a dialogue with and support AGYW and youths around their sexuality and their reproductive health; model respectful, gender relationships, and mobilize to change harmful beliefs and norms related to SRHR. <br>
+              <br>
+                  AGYW and youths have increased agency, leadership, and peer networks to influence and position gender equality and inclusion and improved quality and comprehensive SRHR.
+              </td>
+            </tr>
+            <tr>
+              <td>Advocate for access to quality SRHR services and accurate information</td>
+              <td>Increased budgetary allocation towards supporting SRHR commodities supply and services.</td>
+            </tr>
+            <tr>
+              <td>Promote health system strengthening to enhance provision of Youth Friendly Services</td>
+              <td>Increased number of youths representatives in facilities management board to advocate for YFS. <br>
+              <br>
+                  Increased knowledge of healthcare service providers on how to handle AGYW and youths. <br>
+              <br>
+                  Enhanced data management on SRHR.
+            </td>
+            </tr>
+            <tr>
+              <td>Advocate for increased budgetary allocation towards AYSRH programs to improve service delivery.</td>
+              <td>Improved service delivery and availability of SRH commodities.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h3>HEDSO ORGANIZATION</h3>
+          <p>Tom Mboya Estate, Kisumu, Kenya</p>
+          <p>Phone: +254773222909 | +254768546640</p>
+          <p>Email: info@hedso.org</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="./index.html">The Issue</a></li>
+            <li><a href="./approach.html">Our Approach</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./donate.html">Donate</a></li>
+            <li><a href="./volunteer.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Connect with Us</h3>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

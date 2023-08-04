@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | HEDSO</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Include custom CSS -->
+  <style>
+    body {
+      background-color: #191919;
+      color: #fff;
+    }
+    
+    .navbar {
+      background-color: #161b24;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
+    .nav-link {
+      color: #fff !important;
+    }
+    
+    .footer {
+      background-color: #161b24;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
+    .footer a {
+      color: #4CAF50;
+    }
+    
+    .footer a:hover {
+      color: #fff;
+    }
+    
+    .gallery-section {
+      background-color: #191919;
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+    
+    .gallery-filter {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .gallery-filter .btn {
+      margin-right: 10px;
+    }
+    
+    .gallery-images {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .gallery-image {
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 100%;
+    }
+    
+    .gallery-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-image:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HEDSO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./about.html">OverView</a>
+            <a class="dropdown-item" href="./board.html">Meet The Team</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="./main.html" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Programs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="./agw.html">AGYW</a>
+            <a class="dropdown-item" href="./integ.html">INTEGRATED HEALTH</a>
+            <a class="dropdown-item" href="./gbv.html">SGBV</a>
+            <a class="dropdown-item" href="./srhr.html">SRHR</a>
+            <a class="dropdown-item" href="./hiv.html">HIV PREVENTION</a>
+            <a class="dropdown-item" href="./climateres.html">CLIMATE RESILIENCE</a>
+            <a class="dropdown-item" href="./waste.html">WASTE MANAGEMENT</a>
+            <a class="dropdown-item" href="./tree.html">TREE PLANTING</a>
+            <a class="dropdown-item" href="./disaster.html">DISASTER MANAGEMENT</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./approach.html">Our Approach</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="programsDropdown">
+            <a class="dropdown-item" href="#program1">Blogs</a>
+            <a class="dropdown-item" href="#program2">Newsletters</a>
+            <a class="dropdown-item" href="#program3">Events</a>
+            <a class="dropdown-item" href="#program4">Our Gallery</a>
+          </div>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html">Donate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./volunteer.html">Volunteer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-filter">
+        <button class="btn btn-primary active" data-filter="all">All</button>
+        <button class="btn btn-primary" data-filter="nature">Climate Resilience</button>
+        <button class="btn btn-primary" data-filter="people">Integrated Health</button>
+        <button class="btn btn-primary" data-filter="events">Economic Empowerment</button>
+      </div>
+      <ul class="gallery-images">
+        <li class="gallery-image nature">
+          <img src="./images/gallery1.jpg" alt="Nature Image">
+        </li>
+        <li class="gallery-image people">
+          <img src="./images/gallery2.jpg" alt="People Image">
+        </li>
+        <li class="gallery-image events">
+          <img src="./images/gallery3.jpg" alt="Events Image">
+        </li>
+        <li class="gallery-image nature">
+            <img src="./images/gallery4.jpg" alt="Nature Image">
+        </li>
+        <li class="gallery-image nature">
+          <img src="./images/gallery5.jpg" alt="Nature Image">
+        </li>
+        <li class="gallery-image people">
+          <img src="./images/gallery6.jpg" alt="People Image">
+        </li>
+        <li class="gallery-image events">
+          <img src="./images/gallery7.jpg" alt="Events Image">
+        </li>
+        <li class="gallery-image events">
+            <img src="./images/gallery8.jpg" alt="Events Image">
+        </li>
+        <li class="gallery-image events">
+            <img src="./images/gallery9.jpg" alt="Events Image">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3>HEDSO ORGANIZATION</h3>
+            <p>Tom Mboya Estate, Kisumu, Kenya</p>
+            <p>Phone: +254773222909 | +254768546640</p>
+            <p>Email: info@hedso.org</p>
+          </div>
+          <div class="col-lg-4">
+            <h3>Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="./index.html">The Issue</a></li>
+              <li><a href="./approach.html">Our Approach</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./donate.html">Donate</a></li>
+              <li><a href="./volunteer.html">Volunteer</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3>Connect with Us</h3>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="small">&copy; 2023 Hedso Organization. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Include Bootstrap JS dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Filter images on button click
+      $('.gallery-filter button').click(function() {
+        const filterValue = $(this).data('filter');
+        if (filterValue === 'all') {
+          $('.gallery-image').show();
+        } else {
+          $('.gallery-image').hide();
+          $('.gallery-image.' + filterValue).show();
+        }
+        $(this).addClass('active').siblings().removeClass('active');
+      });
+    });
+  </script>
+</body>
+</html>
